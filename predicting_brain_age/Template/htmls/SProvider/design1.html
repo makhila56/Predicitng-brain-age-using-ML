@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Provider</title>
+<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+<style>
+    body{background: url("{% static 'bg1.jpg' %}");
+	background-size:cover;
+	font-family: 'Russo One', sans-serif;
+	background-color: #000000;
+    }
+    h1{
+    color:white;
+    }
+.topnav {
+  overflow: hidden;
+  background-color: rgba(2, 12, 66, 0.589);
+}
+
+.topnav a {
+  float: left;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #8e4fd1;
+  color: white;
+}
+.style1 {
+	color: #ffffff;
+	font-weight: bold;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+
+<h1 align="center" class="style1">Predicting brain age using machine learning algorithms: A comprehensive evaluation</h1>
+
+<div  class="topnav">
+
+    <a href="{% url 'train_model' %}">Browse Healthcare Data Sets and Train & Test </a>
+    <a href="{% url 'likeschart' 'bar' %}">View  Trained and Tested Accuracy in Bar Chart </a>
+    <a href="{% url 'charts1' 'line' %}"> View Trained and Tested Accuracy Results </a>
+    <a  href="{% url 'View_Prediction_Of_Brain_Age_Type' %}">View_Prediction_Of_Brain_Age_Type</a>
+    <a href="{% url 'View_BrainAge_Type_Ratio' %}">View_BrainAge_Type_Ratio </a>
+    <a href="{% url 'Download_Predicted_DataSets' %}">Download Finacicial Type Predicted Data Sets</a>
+    <a href="{% url 'charts' 'line' %}">View_BrainAge_Type_Ratio Results </a>
+    <a href="{% url 'View_Remote_Users' %}">View All Remote Users</a>
+    <a href="{% url 'login'  %}">Logout</a>
+
+</div>
+
+
+
+<div class="mainholder">
+{% block researchblock %}
+{% endblock %}
+</div>
+</body>
+</html>

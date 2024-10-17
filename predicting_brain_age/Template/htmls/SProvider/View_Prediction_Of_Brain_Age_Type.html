@@ -1,0 +1,106 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:#2f0168;padding:50px;opacity: 0.9  }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid rgb(0, 0, 0);
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #ffffff;
+	font-weight: bold;
+}
+.style12 {color: #38007b; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">View Brain Age Prediction Type Details  !!! </p>
+                            <hr>
+                            <div class="tweettext">
+                               <table width="739" border="5" align="center" bordercolor="#04124c">
+
+                                    <tr>
+
+                                    <td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">idno</span></div></td>
+                                    <td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">gender</span></div></td>
+                                    <td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">age</span></div></td>
+                                    <td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">hypertension</span></div></td>
+                                    <td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">heart_disease</span></div></td>
+                                    <td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">ever_married</span></div></td>
+                                    <td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">work_type</span></div></td>
+                                    <td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Residence_type</span></div></td>
+                                    <td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">avg_glucose_level</span></div></td>
+                                    <td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">bmi</span></div></td>
+                                    <td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">smoking_status</span></div></td>
+                                    <td width="366" bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Prediction</span></div></td>
+
+                      </tr>
+                            {% for object in list_objects %}
+                      <tr>
+
+                          <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.idno}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.gender}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.age}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.hypertension}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.heart_disease}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.ever_married}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.work_type}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Residence_type}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.avg_glucose_level}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.bmi}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.smoking_status}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Prediction}}</div></td>
+
+
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
